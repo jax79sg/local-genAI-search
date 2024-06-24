@@ -2,11 +2,14 @@ import re
 import streamlit as st
 import requests
 import json
+
+api_url=environment_var.api_url
 st.title('_:blue[Local GenAI Search]_ :sunglasses:')
 question = st.text_input("Ask a question based on your local files", "")
 if st.button("Ask a question"):
     st.write("The current question is \"", question+"\"")
-    url = "http://127.0.0.1:8000/ask_localai"
+    # url = "http://127.0.0.1:8000/ask_localai"
+    url = api_url
 
     payload = json.dumps({
       "query": question
