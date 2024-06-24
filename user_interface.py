@@ -3,7 +3,7 @@ import streamlit as st
 import requests
 import json
 
-api_url=environment_var.api_url
+api_url=config_var.api_url
 st.title('_:blue[Local GenAI Search]_ :sunglasses:')
 question = st.text_input("Ask a question based on your local files", "")
 if st.button("Ask a question"):
